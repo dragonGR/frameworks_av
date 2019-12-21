@@ -258,6 +258,8 @@ private:
     void updateDuration();
     void updateTargetDuration();
 
+    bool bufferAvailable() const;
+
     DISALLOW_EVIL_CONSTRUCTORS(PlaylistFetcher);
 };
 
