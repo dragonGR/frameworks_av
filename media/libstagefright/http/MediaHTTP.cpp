@@ -69,6 +69,11 @@ void MediaHTTP::clearDRMState_l() {
         mDrmManagerClient->closeDecryptSession(mDecryptHandle);
         mDecryptHandle = NULL;
     }
+
+    if (mDrmManagerClient != NULL) {
+        delete mDrmManagerClient;
+        mDrmManagerClient = NULL;
+    }
 }
 
 }  // namespace android
